@@ -6,5 +6,5 @@ import (
 
 func Login(c *fiber.Ctx) error {
 
-	return c.SendString("Login efetuado com sucesssssso!")
+	return c.SendString("Login efetuado com sucesso!")
 }
