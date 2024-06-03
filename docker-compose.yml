@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mc-insta-bot:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_CONNECT_TIMEOUT=10s
+      - MONGO_PING_TIMEOUT=2s
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

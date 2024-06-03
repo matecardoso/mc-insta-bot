@@ -1,0 +1,5 @@
+{
+    "mongo_uri": "{{MONGO_URI:mongodb://localhost:27017}}",
+    "mongo_connect_timeout": "{{MONGO_CONNECT_TIMEOUT:10s}}",
+    "mongo_ping_timeout": "{{MONGO_PING_TIMEOUT:2s}}"
+}
