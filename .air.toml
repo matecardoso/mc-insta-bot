@@ -1,0 +1,13 @@
+[build]
+  bin = "mc-insta-bot"
+  cmd = "go build -o ./tmp/main ./cmd/mc-insta-bot"
+  full_bin = "./tmp/main"
+  main = "cmd/mc-insta-bot/main.go"
+
+[run]
+  cmd = "./tmp/main"
+  watch = ["internal", "cmd"]
+  ignore = ["tmp", "vendor"]
+
+[logger]
+  level = "debug"
