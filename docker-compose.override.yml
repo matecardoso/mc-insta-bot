@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mc-insta-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env.dev
+    volumes:
+      - .:/app
+      - /app/tmp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    command: sh -c "air"
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

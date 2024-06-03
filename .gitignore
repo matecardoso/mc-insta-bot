@@ -30,9 +30,7 @@ vendor/
 
 # Configuration files
 .env
-
-# Docker files
-docker-compose.override.yml
+.env.dev
 
 # Build directories
 bin/

@@ -8,6 +8,8 @@ import (
 
 func Setup() *fiber.App {
 	app := fiber.New()
-	routes.SetupRoutes(app)
+
+	routes.Setup(app)
+
 	return app
 }

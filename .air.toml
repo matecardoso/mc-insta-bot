@@ -6,8 +6,9 @@
 
 [run]
   cmd = "./tmp/main"
-  watch = ["internal", "cmd"]
+  watch = ["internal", "cmd", ".env.dev"]
   ignore = ["tmp", "vendor"]
+  include_ext = ["go", "dev"]
 
 [logger]
   level = "debug"
